@@ -16,14 +16,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_use_email_as_username.apps.DjangoUseEmailAsUsernameConfig',
-    'custom_user.apps.CustomUserConfig',
     'lison'
 
 
 ]
 
-AUTH_USER_MODEL = 'custom_user.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
