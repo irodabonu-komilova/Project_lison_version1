@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lison | Ro'yxatdan o'tish</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <div class="brand">
+            <div class="logo">🪶</div>
+
+            <h1>LISON</h1>
+
+            <p class="slogan">
+                So‘zlar qalbdan tug‘iladi...
+            </p>
+
+            <div class="line">━━ ❤ ━━</div>
+
+            <p class="desc">
+                She’rlar, hikoyalar va fikrlar bilan
+                o‘rtoqlashing, ijodkorlar jamoasiga
+                qo‘shiling.
+            </p>
+        </div>
+
+        <div class="quote">
+            ❝ Yaxshi so‘z — qalb ko‘zgusi,<br>
+            uni yoz, ulash, yashat. 💜
+        </div>
+    </div>
+
+    <div class="right">
+
+        <form class="form" id="registerForm" method="POST">
+
+            {% csrf_token %}
+
+            <div class="feather">🪶</div>
+
+            <h2>Ro‘yxatdan o‘tish</h2>
+
+            <p>
+                Lisonga qo‘shilib, ijodingizni dunyoga ulashing
+            </p>
+
+            <div class="input-box">
+                <span>👤</span>
+                <input
+                    type="text"
+                    name="fullname"
+                    id="fullname"
+                    placeholder="Ism va familiyangiz"
+                    required
+                >
+            </div>
+
+            <div class="input-box">
+                <span>@</span>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Username (masalan: ijodkor_23)"
+                    required
+                >
+            </div>
+
+            <small>
+                Boshqalar sizni shu username orqali topadi
+            </small>
+
+            <div class="input-box">
+                <span>📞</span>
+                <input
+                    type="tel"
+                    name="phone_number"
+                    id="phone"
+                    placeholder="Telefon raqamingiz"
+                    required
+                >
+            </div>
+
+            <small>
+                Masalan: +998 90 123 45 67
+            </small>
+
+            <div class="input-box">
+                <span>✉️</span>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email manzilingiz"
+                    required
+                >
+            </div>
+
+            <small>
+                Masalan: siz@example.com
+            </small>
+
+            <div class="input-box">
+                <span>🔒</span>
+
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Parol kiriting"
+                    required
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('password')"
+                >
+                    👁
+                </button>
+            </div>
+
+            <div class="input-box">
+                <span>🔒</span>
+
+                <input
+                    type="password"
+                    name="confirm_password"
+                    id="confirmPassword"
+                    placeholder="Parolni tasdiqlang"
+                    required
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('confirmPassword')"
+                >
+                    👁
+                </button>
+            </div>
+
+            <button class="register-btn" type="submit">
+                🪶 Lisonga qo‘shilish
+            </button>
+
+            <div class="or">
+                <span></span>
+                yoki
+                <span></span>
+            </div>
+
+            <div class="socials">
+                <button type="button">Google bilan</button>
+                <button type="button">Facebook bilan</button>
+                <button type="button">Apple bilan</button>
+            </div>
+
+            <p class="login-text">
+                Hisobingiz bormi?
+
+<!--                <a href="#">-->
+<!--                    Kirish-->
+<!--                </a>-->
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
